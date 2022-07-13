@@ -1,58 +1,29 @@
-body {
-    background: #786747a1;
-    width: 80%;
-    margin: auto;
-
-}
-header {
+/*================ Footer ==============*/
+.footer {
     width: 100%;
-    height: 10%;
-}
-.navbar-brand{
-    color: wheat;
-}
-.navbar-collapse {
-    background: rgba(2, 17, 15, 0.708);
-    padding: 0.6em;
-    margin: 0;
-    border-radius: 4px;
-    color: white;
-}
-.navbar-collapse li {
-    background: rgba(196, 86, 1, 0.635);
-    color: white;
-    margin: 0.5em;
-    box-shadow: 2px 2px;
-    border-radius: 4px;
+    color: goldenrod;
+    background: black;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-between;
 }
 
-.navbar-collapse li:hover {
-    background: #a56c03b8;
-    margin: 0.2em;
-    box-shadow: -2px -2px 2px;
-    border-radius: 4px;
+.footer .col {
+    font-style: italic;
 }
-.btn {
-    margin-top: 0.4em;
-    background: rgba(59, 224, 188, 0.511);;
+
+.footer .footer-info {
+    color: white;
 }
-.table li {
-    background: rgba(59, 224, 189, 0.548);
-    margin: 0.2em;
-    box-shadow: 2px 2px;
-    border-radius: 4px;
+
+.footer img {
+    width: 20px;
 }
-.table li:hover {
-    background: rgba(147, 240, 220, 0.548);
-    margin: 0.2em;
-    box-shadow: -2px -2px 2px;
-    border-radius: 4px;
+
+.formulaire .footer-auteur {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
 }
-/* .forum_item {
-    width: 80%;
-    border: 1px solid gray;
-    border-radius: 10px;
-    padding: 1em;
-    margin-top: 1em;
-    
-} */
