@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Register</h1>
+   
+        <div>
+            <label for="inputEmail">Votre email :</label>
+            {{ form_widget(registrationForm.email, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputEmail',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputNom">Votre nom :</label>
+            {{ form_widget(registrationForm.nom, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputNom',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputPrenom">Votre prénom :</label>
+            {{ form_widget(registrationForm.prenom, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputPrenom',
+                }
+            })}}
+        </div> 
+        <div>
+            <label for="inputGenre">Genre :</label>
+            {{ form_widget(registrationForm.genre, {
+                'attr':{
+                    'class':'form-control d-flex justify-content around',
+                    'id':'inputGenre',
+                }
+            })}}
+        </div> 
+        <div>
+            <label for="inputTelephone">Téléphone :</label>
+            {{ form_widget(registrationForm.telephone, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputTelephone',
+                }
+            })}}
+        </div>  
+        <div>
+            <label for="inputAdresse">Votre adresse :</label>
+            {{ form_widget(registrationForm.adresse, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputAdresse',
+                }
+            })}}
+        </div>
+        <div>
+            <label for="inputComplement">Complement :</label>
+            {{ form_widget(registrationForm.complement, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputComplement',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputcodePostale">Code postal :</label>
+            {{ form_widget(registrationForm.codePostale, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputcodePostale',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputVille">Ville :</label>
+            {{ form_widget(registrationForm.ville, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputTown',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputNaissance">Votre date de naissance :</label>
+            {{ form_widget(registrationForm.naissance, {
+                'attr':{
+                    'id':'inputNaissance',
+                }
+            })}}
+        </div>    
+        <div>
+            <label for="inputPassword">Mot de passe :</label>
+            {{ form_widget(registrationForm.plainPassword, {
+                'attr':{
+                    'class':'form-control',
+                    'id':'inputPassword',
+                }
+            })}}
+        </div>    
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <button type="submit" class="btn">Register</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
