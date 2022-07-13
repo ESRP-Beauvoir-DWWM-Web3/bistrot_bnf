@@ -1,3 +1,29 @@
-{% if app.request.get('_route') != 'app_home' %}
-<a href="{{ path('app_home') }}">retour vers l'accueil</a>
-{% endif %}
+<div class="footer fixed-bottom">
+	<div class="col">
+		<div>Adresse :</div>
+		<span class="footer-info">15 avenue de la rue perdu</span>
+	</div>
+	<div class="col">
+		Contact :
+		<div>
+			<span class="footer-info">
+				<img src="{{ asset ('img/logo/telephone.png') }}">
+				07 01 02 03 04
+			</span>
+			<br>
+			<span>
+				<img src="{{ asset ('img/logo/email.png') }}"></span>
+			<span class="footer-info">contact@babylon.fr</span>
+		</div>
+	</div>
+	<div class="col">
+		Suivez-nous :
+		<div>
+			<span class="footer-info">
+				<a href="http://www.facebook.com"><img src="{{ asset ('img/logo/facebook.png') }}"></a>
+				<a href="http://www.instagram.com"><img src="{{ asset ('img/logo/instagram.png') }}"></a>
+				<a href="http://twitter.com"><img src="{{ asset ('img/logo/twitter.png') }}"></a>
+			</span>
+		</div>
+	</div>
+</div>
