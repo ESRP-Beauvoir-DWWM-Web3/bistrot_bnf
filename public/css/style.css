@@ -1,9 +1,97 @@
 #babylon-logo {
     position: absolute;
     text-align: center;
-    height: 100px;
-    top: 50px;
+    height: 150px;
+    top: 0;
+    margin-left: 45vw;
+    margin-right: 45vw;
 }
+
+body {
+    background-image: url('../img/wallpaper/fond-ecran.jpg');
+    background-attachment: fixed;
+    /*     font-family: 'Alex Brush', cursive;
+    font-family: 'Tangerine', cursive;
+    font-family: 'The Nautigal', cursive;
+    font-size: 2em; */
+}
+
+/*====================== page =========================*/
+.page {
+    width: 90vw;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    padding: 2em;
+    border: 5px solid goldenrod;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.page h1 {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.page label {
+    margin-top: 2em;
+}
+
+/*====================== boutons de validation =======================*/
+
+.page .validation {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.page .validation .btn {
+    border-radius: 50px;
+}
+
+/*=============== tableau dans page =============*/
+
+.page table tr {
+    width: 50%;
+}
+
+.page table tr td {
+    width: 50%;
+}
+
+/*================ navbar primaire ==============*/
+
+#nav1 {
+    height: 75px;
+    border-bottom: 4px solid goldenrod;
+}
+
+#nav1 .btn {
+    border: 2px solid goldenrod;
+    border-radius: 50px;
+}
+
+/*================ navbar secondaire ==============*/
+
+#nav2 .btn {
+    background-color: white;
+    border: 2px solid brown;
+    border-radius: 50px;
+}
+
+/*=========================== carousel ==========================*/
+
+.carousel-accueil {
+    margin: auto;
+    margin-top: 8vh;
+    height: 80vh;
+}
+
+/*============= template profil unique ============*/
+
+.page .card {
+    margin: auto;
+}
+
 
 /*================ Footer ==============*/
 .footer {
@@ -15,6 +103,7 @@
     flex-direction: row;
     align-items: center;
     align-content: space-between;
+    border-top: 4px solid goldenrod;
 }
 
 .footer .col {
