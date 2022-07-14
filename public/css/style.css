@@ -29,7 +29,9 @@ body {
 }
 
 .page h1 {
+    text-transform: capitalize;
     text-align: center;
+    text-decoration: underline;
     margin-bottom: 1vh;
 }
 
@@ -50,32 +52,32 @@ body {
 
 /*=============== tableau dans page =============*/
 
-.page table tr {
-    width: 50%;
-}
-
-.page table tr td {
-    width: 50%;
-}
-
 /*================ navbar primaire ==============*/
 
 #nav1 {
     height: 75px;
     border-bottom: 4px solid goldenrod;
+    text-transform: capitalize;
 }
 
 #nav1 .btn {
     border: 2px solid goldenrod;
     border-radius: 50px;
+    font-weight: bold;
 }
 
 /*================ navbar secondaire ==============*/
+#nav2 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
 
 #nav2 .btn {
     background-color: white;
     border: 2px solid brown;
     border-radius: 50px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /*=========================== carousel ==========================*/

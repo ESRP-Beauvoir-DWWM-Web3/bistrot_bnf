@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User index
+{% block title %}Gestion utilisateurs
 {% endblock %}
 
 {% block body %}
 	<div class="page">
-		<h1>User index</h1>
+		<h1>liste utilisateurs</h1>
 
 		<table class="table">
 			<thead>
 				<tr>
 					<th>Id</th>
 					<th>Email</th>
-					<th>Roles</th>
+					<th>Rôles</th>
 					<th>Nom</th>
 					<th>Prénom</th>
 					<th>Adresse</th>
-					<th>Complément</th>
+					<th>Complément d'adresse</th>
 					<th>Date de naissance</th>
 					<th>Code postal</th>
 					<th>Ville</th>
@@ -53,6 +53,26 @@
 			</tbody>
 		</table>
 
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			{% for user in users %}
+				<div class="col">
+					<div class="card h-100">
+						<img src="..." class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Card title</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">Last updated 3 mins ago</small>
+						</div>
+					</div>
+				</div>
+		{% else %}
+			</div>
+		{% endfor %}
+	</div>
+	<div class="validation">
 		<a href="{{ path('app_user_new') }}">Create new</a>
-		<div>
-		{% endblock %}
+	</div>
+	<div>
+	{% endblock %}
