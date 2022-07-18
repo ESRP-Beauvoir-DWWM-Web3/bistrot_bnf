@@ -24,28 +24,74 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email', EmailType::class)
-            ->add('nom', TextType::class)
-            ->add('prenom', TextType::class)
-            ->add('telephone', TextType::class)
-            ->add('adresse', TextareaType::class)
-            ->add('complement', TextareaType::class)
-            ->add('codePostale', IntegerType::class)
-            ->add('ville', TextType::class)
-            ->add('genre', ChoiceType::class,[
-                'choices' => [
-                    'Homme'=>'homme',
-                    'Femme'=>'femme'
-                ],
-                'expanded'=>'false',
-                'choice_attr'=>[
-                    'Homme'=>['class'=>'me-1'],
-                    'Femme'=>['class'=>'me-1 ms-5']
+            ->add('email', EmailType::class, [
+                'label' => 'Votre email :',
+                'attr' => [
+                    'class' => 'form-control'
                 ]
             ])
+            ->add('nom', TextType::class, [
+                'label' => 'Votre nom :',
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('prenom', TextType::class, [
+                'label' => 'Votre prénom :',
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('telephone', TextType::class, [
+                'label' => 'Votre numéro de téléphone :',
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('adresse', TextareaType::class, [
+                'label' => 'Votre adresse :',                
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('complement', TextareaType::class, [
+                'label' => 'Votre complément d\'adresse :',                
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('codePostale', IntegerType::class, [
+                'label' => 'Votre code postal :',                
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('ville', TextType::class, [
+                'label' => 'Votre ville :',                
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
+            ->add('genre', ChoiceType::class,[
+                'label' => 'Votre genre :',                
+                'choices' => [
+                    'Homme' => 'homme',
+                    'Femme' => 'femme',
+                    'Autre' => 'autre',
+                ],
+                'mapped' => true,
+                'multiple' => false,
+                'attr' => [
+                    'class' => 'form-select'
+                ],
+            ])
             ->add('naissance', DateType::class,[
+                'label' => 'Votre date naissance :',                
                 'widget' => 'choice',
-                'years' => range(date('Y')-100,date('Y')-20)
+                'years' => range(date('Y')-100,date('Y')-20),
+                'attr' => [
+                    'class' => 'form-control'
+                ]
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -58,13 +104,13 @@ class RegistrationFormType extends AbstractType
             ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'required' => 'true',
-                'invalid_message' => 'Les mdp ne correspondent pas',
+                'invalid_message' => 'Les mots de passes ne correspondent pas',
                 'first_options' => [
-                    'label' => 'Entrez un mot de passe',
+                    'label' => 'Entrez votre mot de passe :',
                     'attr' => ['class' => 'form-control']
                 ],
                 'second_options' => [
-                    'label' => 'Retapez le mot de passe',
+                    'label' => 'Retapez votre mot de passe :',
                     'attr' => ['class' => 'form-control']
                 ],
                 'mapped' => false,
