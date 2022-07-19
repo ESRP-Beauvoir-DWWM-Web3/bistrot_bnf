@@ -55,12 +55,20 @@
 
 		<div class="row row-cols-1 row-cols-md-3 g-4">
 			{% for user in users %}
+				<pre>
+				{{ dump(user.avatar) }}
+			</pre>
 				<div class="col">
 					<div class="card h-100">
-						<img src="..." class="card-img-top" alt="..." width="100%">
+						<img src="{{ asset ('uploads/images/ {{ user.avatar }}') }}" class="card-img-top" alt="..." width="100%">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<h5 class="card-title">{{ user.prenom }}
+								{{ user.nom }}</h5>
+
+							<p class="card-text">{{ user.adresse }}</p>
+							{{ user.complement }}<br>
+							{{ user.codePostale }}
+							{{ user.ville }}
 						</div>
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item">Date de naissance :

@@ -5,11 +5,13 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -92,6 +94,28 @@ class RegistrationFormType extends AbstractType
                 'attr' => [
                     'class' => 'form-control'
                 ]
+            ])
+            ->add('avatar', FileType::class, [
+                                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize'=>'16384k',
+                        'maxSizeMessage'=>'Taille de fichier trop grande',
+                        'mimeTypes'=>[
+                            'image/jpeg',
+                            'image/png',
+                            'image/svg',
+                            'image/jpg',
+                            'image/webp',
+                        ],
+                        'mimeTypesMessage'=>'Extension de fichier invalide',
+                    ])
+                    ],
+                'attr'=>[
+                    'class'=>'form-control',
+                ],
+                'data_class'=>null,
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,

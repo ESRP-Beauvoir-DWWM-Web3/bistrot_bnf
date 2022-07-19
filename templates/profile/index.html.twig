@@ -7,9 +7,11 @@
 	<div class="page">
 
 		<h1>mon profil</h1>
-
+		<pre>
+	{{ dump(app.user.avatar) }}
+</pre>
 		<div class="card profile" style="width: 18rem;">
-			<img src="{{ asset ('img/logo/avatar.svg') }}" class="card-img-top" alt="photo de profil">
+			<img src="{{ app.user.avatar }}" class="card-img-top" alt="photo de profil">
 			<div class="card-body">
 				<h5 class="card-title">{{ app.user.prenom }}
 					{{ app.user.nom }}</h5>
