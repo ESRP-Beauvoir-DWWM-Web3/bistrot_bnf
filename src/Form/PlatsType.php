@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Plats;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -50,10 +51,27 @@ class PlatsType extends AbstractType
                 ]
             ])
             ->add('photo', FileType::class, [
-                'label' => 'Image d\'illustration :',
-                'attr' => [
-                    'class' => 'form-select'
-                ]
+                'mapped' => false,
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize'=>'16384k',
+                        'maxSizeMessage'=>'Taille de fichier trop grande',
+                        'mimeTypes'=>[
+                            'image/jpeg',
+                            'image/png',
+                            'image/svg',
+                            'image/jpg',
+                            'image/webp',
+                            'image/bmp',
+                        ],
+                        'mimeTypesMessage'=>'Extension de fichier invalide',
+                    ])
+                    ],
+                'attr'=>[
+                    'class'=>'form-control',
+                ],
+                'data_class'=>null,
             ])
         ;
     }

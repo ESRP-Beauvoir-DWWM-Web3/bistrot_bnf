@@ -13,9 +13,8 @@
 					<th>Id</th>
 					<th>Nom</th>
 					<th>Description</th>
-					<th>Categorie</th>
+					<th>Catégorie</th>
 					<th>Prix</th>
-					<th>Photo</th>
 					<th>actions</th>
 				</tr>
 			</thead>
@@ -26,21 +25,22 @@
 						<td>{{ plat.nom }}</td>
 						<td>{{ plat.description }}</td>
 						<td>{{ plat.categorie }}</td>
-						<td>{{ plat.prix }}</td>
-						<td>{{ plat.photo }}</td>
+						<td>{{ plat.prix }}
+							€</td>
 						<td>
-							<a href="{{ path('app_plats_show', {'id': plat.id}) }}">show</a>
-							<a href="{{ path('app_plats_edit', {'id': plat.id}) }}">edit</a>
+							<a href="{{ path('app_plats_show', {'id': plat.id}) }}" class="btn btn-light">montrer</a>
+							<a href="{{ path('app_plats_edit', {'id': plat.id}) }}" class="btn btn-warning">éditer</a>
 						</td>
 					</tr>
 				{% else %}
 					<tr>
-						<td colspan="6">no records found</td>
+						<td colspan="6">Aucun plat trouvé</td>
 					</tr>
 				{% endfor %}
 			</tbody>
 		</table>
-
-		<a href="{{ path('app_plats_new') }}" class="btn btn-primary">Créer un plat</a>
+		<div class="validation">
+			<a href="{{ path('app_plats_new') }}" class="btn btn-primary">Créer un plat</a>
+		</div>
 	</div>
 {% endblock %}

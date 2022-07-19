@@ -6,11 +6,12 @@
 {% block body %}
 	<div class="page">
 		<h1>Edit Plats</h1>
+		<div class="validation">
+			{{ include('plats/_form.html.twig', {'button_label': 'mise à jour'}) }}
+			{{ include('plats/_delete_form.html.twig') }}
 
-		{{ include('plats/_form.html.twig', {'button_label': 'Update'}) }}
+			<a href="{{ path('app_plats_index') }}" class="btn btn-primary">retour à la liste</a>
 
-		<a href="{{ path('app_plats_index') }}">back to list</a>
-
-		{{ include('plats/_delete_form.html.twig') }}
+		</div>
 	</div>
 {% endblock %}
