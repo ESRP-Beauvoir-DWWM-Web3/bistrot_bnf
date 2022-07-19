@@ -72,7 +72,7 @@ class RegistrationFormType extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
-            ->add('genre', ChoiceType::class,[
+            ->add('genre', ChoiceType::class, [
                 'label' => 'Votre genre :',                
                 'choices' => [
                     'Homme' => 'homme',
