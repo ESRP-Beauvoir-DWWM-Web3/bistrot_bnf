@@ -59,12 +59,21 @@ class UserController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_user_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, User $user, UserRepository $userRepository): Response
+    public function edit(Request $request, FileUploader $fileUploader,User $user, UserRepository $userRepository): Response
     {
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // on récupère le fichier présent dans le formulaire
+            $picture = $form->get('avatar')->getData();
+            // si le champs picture est renseigné (si $picture existe)
+            if($picture){
+                // on récupère le nom du fichier téléversé en même temps qu'il est placé dans le dossier public/uploads/images/
+                $fileName = $fileUploader->upload($picture);
+                // on renseigne la propriété picture de l'article avec ce nom de fichier.
+                $user->setAvatar($fileName);
+            }
             $userRepository->add($user, true);
 
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);

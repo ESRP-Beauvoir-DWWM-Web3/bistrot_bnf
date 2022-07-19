@@ -108,6 +108,7 @@ class RegistrationFormType extends AbstractType
                             'image/svg',
                             'image/jpg',
                             'image/webp',
+                            'image/bmp',
                         ],
                         'mimeTypesMessage'=>'Extension de fichier invalide',
                     ])
