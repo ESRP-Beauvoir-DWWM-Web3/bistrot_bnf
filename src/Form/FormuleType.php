@@ -18,7 +18,7 @@ class FormuleType extends AbstractType
     {
         $builder
             ->add('photo', FileType::class, [
-                'label' => 'Votre photo de profil : ',
+                'label' => 'Votre photo du plat : ',
                 'attr' => [
                     'class' => 'form-control'
                 ],
@@ -32,6 +32,9 @@ class FormuleType extends AbstractType
                             'image/jpeg',
                             'image/png',
                             'image/svg',
+                            'image/webp',
+                            'image/bmp',
+                            'image/jpg',
                         ],
                         'mimeTypesMessage'=>'Extension de fichier invalide',
                     ])
