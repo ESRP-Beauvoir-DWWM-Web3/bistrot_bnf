@@ -22,6 +22,9 @@ class BoissonsCategorie
     #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Boissons::class)]
     private Collection $boissons;
 
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $photo = null;
+
     public function __construct()
     {
         $this->boissons = new ArrayCollection();
@@ -70,6 +73,18 @@ class BoissonsCategorie
                 $boisson->setCategorie(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(?string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }
