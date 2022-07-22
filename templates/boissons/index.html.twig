@@ -25,8 +25,8 @@
 						<td>{{ boisson.prix }}</td>
 						<td>{{ boisson.photo }}</td>
 						<td>
-							<a href="{{ path('app_boissons_show', {'id': boisson.id}) }}">show</a>
-							<a href="{{ path('app_boissons_edit', {'id': boisson.id}) }}">edit</a>
+							<a href="{{ path('app_boissons_show', {'id': boisson.id}) }}" class="btn btn-light">montrer</a>
+							<a href="{{ path('app_boissons_edit', {'id': boisson.id}) }}" class="btn btn-warning">éditer</a>
 						</td>
 					</tr>
 				{% else %}
@@ -37,6 +37,6 @@
 			</tbody>
 		</table>
 
-		<a href="{{ path('app_boissons_new') }}">Create new</a>
+		<a href="{{ path('app_boissons_new') }}" class="btn btn-primary">Créer une boisson</a>
 	</div>
 {% endblock %}
