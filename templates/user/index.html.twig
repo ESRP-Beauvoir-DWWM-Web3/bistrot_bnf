@@ -8,50 +8,50 @@
 		<h1>liste utilisateurs</h1>
 
 		{# 		<table class="table">
-									<thead>
-										<tr>
-											<th>Id</th>
-											<th>Email</th>
-											<th>Rôles</th>
-											<th>Nom</th>
-											<th>Prénom</th>
-											<th>Adresse</th>
-											<th>Complément d'adresse</th>
-											<th>Date de naissance</th>
-											<th>Code postal</th>
-											<th>Ville</th>
-											<th>Téléphone</th>
-											<th>Genre</th>
-											<th>actions</th>
-										</tr>
-									</thead>
-									<tbody>
-										{% for user in users %}
-											<tr>
-												<td>{{ user.id }}</td>
-												<td>{{ user.email }}</td>
-												<td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-												<td>{{ user.nom }}</td>
-												<td>{{ user.prenom }}</td>
-												<td>{{ user.adresse }}</td>
-												<td>{{ user.complement }}</td>
-												<td>{{ user.naissance ? user.naissance|date('d-m-Y') : '' }}</td>
-												<td>{{ user.codePostale }}</td>
-												<td>{{ user.ville }}</td>
-												<td>{{ user.telephone }}</td>
-												<td>{{ user.genre }}</td>
-												<td>
-													<a href="{{ path('app_user_show', {'id': user.id}) }}">montrer</a>
-													<a href="{{ path('app_user_edit', {'id': user.id}) }}">éditer</a>
-												</td>
-											</tr>
-										{% else %}
-											<tr>
-												<td colspan="14">Aucun enregistrement trouvé</td>
-											</tr>
-										{% endfor %}
-									</tbody>
-								</table> #}
+																							<thead>
+																								<tr>
+																									<th>Id</th>
+																									<th>Email</th>
+																									<th>Rôles</th>
+																									<th>Nom</th>
+																									<th>Prénom</th>
+																									<th>Adresse</th>
+																									<th>Complément d'adresse</th>
+																									<th>Date de naissance</th>
+																									<th>Code postal</th>
+																									<th>Ville</th>
+																									<th>Téléphone</th>
+																									<th>Genre</th>
+																									<th>actions</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								{% for user in users %}
+																									<tr>
+																										<td>{{ user.id }}</td>
+																										<td>{{ user.email }}</td>
+																										<td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+																										<td>{{ user.nom }}</td>
+																										<td>{{ user.prenom }}</td>
+																										<td>{{ user.adresse }}</td>
+																										<td>{{ user.complement }}</td>
+																										<td>{{ user.naissance ? user.naissance|date('d-m-Y') : '' }}</td>
+																										<td>{{ user.codePostale }}</td>
+																										<td>{{ user.ville }}</td>
+																										<td>{{ user.telephone }}</td>
+																										<td>{{ user.genre }}</td>
+																										<td>
+																											<a href="{{ path('app_user_show', {'id': user.id}) }}">montrer</a>
+																											<a href="{{ path('app_user_edit', {'id': user.id}) }}">éditer</a>
+																										</td>
+																									</tr>
+																								{% else %}
+																									<tr>
+																										<td colspan="14">Aucun enregistrement trouvé</td>
+																									</tr>
+																								{% endfor %}
+																							</tbody>
+																						</table> #}
 
 		<div class="row row-cols-1 row-cols-md-3 g-4">
 			{% for user in users %}
@@ -85,11 +85,7 @@
 										<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
 										<button class="btn btn-danger">Effacer</button>
 									</div>
-
-
 								</form>
-
-
 							</small>
 						</div>
 					</div>
