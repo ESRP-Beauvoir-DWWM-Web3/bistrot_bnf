@@ -192,12 +192,16 @@ table tr td .btn {
 
 .carousel-accueil {
     margin: auto;
-    margin-top: 8vh;
-    height: 80vh;
+    width: 50%;
 }
 
 
+.carousel-accueil image {
+    width: 60% !important;
+    border: gold !important;
+    margin-top: 4em;
 
+}
 
 
 

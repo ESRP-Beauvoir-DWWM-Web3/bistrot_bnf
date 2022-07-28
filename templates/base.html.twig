@@ -14,7 +14,9 @@
 		href="{{ asset ('css/bootstrap.min.css') }}" rel="stylesheet"> {# Insertion du CSS fontawasome #}
 		<link
 		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
+			
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 		{# Insertion du CSS personnalisé #}
 		<link
@@ -44,6 +46,13 @@
 
 		<script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>
 		<script src="https://kit.fontawesome.com/ed1208b2df.js" crossorigin="anonymous"></script>
+		<script>
+	       var myCarousel = document.querySelector('#myCarousel')
+	       var carousel = new bootstrap.Carousel(myCarousel, {
+  	       interval: 2000,
+  	       wrap: true
+	    })
+	    </script>
 
 	</body>
 </html>

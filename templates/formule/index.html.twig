@@ -48,7 +48,7 @@
 			{% for formule in formules %}
 				<div class="col">
 					<div class="card h-100">
-						<img src="#" class="card-img-top" alt="...">
+						<img src="{{ asset ('uploads/images/') }}{{ formule.photo }}" class="card-img-top" alt="photo de formule">
 						<div class="card-body">
 							<h5 class="card-title">{{ formule.nom }}</h5>
 
