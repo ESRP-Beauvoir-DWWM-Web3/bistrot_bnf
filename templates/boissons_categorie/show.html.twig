@@ -1,34 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}BoissonsCategorie
+{% block title %}Type de boisson
 {% endblock %}
 
 {% block body %}
 	<div class="page">
-		<h1>BoissonsCategorie</h1>
+		<h1>Type de boissons</h1>
 
-		<table class="table">
-			<tbody>
-				<tr>
-					<th>Id</th>
-					<td>{{ boissons_categorie.id }}</td>
-				</tr>
-				<tr>
-					<th>Nom</th>
-					<td>{{ boissons_categorie.nom }}</td>
-				</tr>
-				<tr>
-					<th>Photo</th>
-					<td>{{ boissons_categorie.photo }}</td>
-				</tr>
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="col">
+				<div class="card h-100">
+					<img src="{{ asset ('uploads/images/') }}{{ boissons_categorie.photo }}" class="card-img-top" alt="...">
 
-			</tbody>
-		</table>
+					<div class="card-body">
+						<h5 class="card-title">{{ boissons_categorie.nom }}</h5>
+					</div>
 
-		<a href="{{ path('app_boissons_categorie_index') }}" class="btn btn-primary">back to list</a>
+				</div>
 
-		<a href="{{ path('app_boissons_categorie_edit', {'id': boissons_categorie.id}) }}" class="btn btn-warning">éditer</a>
 
-		{{ include('boissons_categorie/_delete_form.html.twig') }}
+			</div>
+
+		</div>
+		<div class="validation">
+			<a href="{{ path('app_boissons_categorie_index') }}" class="btn btn-primary">retour à la liste</a>
+
+			<a href="{{ path('app_boissons_categorie_edit', {'id': boissons_categorie.id}) }}" class="btn btn-warning">éditer</a>
+
+			{{ include('boissons_categorie/_delete_form.html.twig') }}
+		</div>
 	</div>
 {% endblock %}

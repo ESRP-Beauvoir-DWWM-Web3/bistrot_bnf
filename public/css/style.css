@@ -3,10 +3,9 @@
     text-align: center;
     height: 150px;
     top: 0;
-    margin-left: 50vw;
-    margin-right: 50vw;
+    margin-left: 42vw;
+    margin-right: 53vw;
 }
-
 
 body {
     background-image: url('../img/wallpaper/fond-ecran.jpg');
@@ -17,15 +16,82 @@ body {
     font-family: 'The Nautigal', cursive;
     font-size: 2em; */
 }
+/*=====================Carte===========================*/
+.page_carte {
+    color: aliceblue;
+}
+table {
+    width: 100%;
+}
+table th {
+    width: 20%;
+}
+table td {
+    width: 40%;
+}
+.alcools_forts tr {
+    margin-bottom: 50px;
+}
+.alcools_legers  {
+    margin-bottom: 50px;
+ 
+}
+#alcools_forts {
+    width: 100%;
+    margin-bottom: 50px;
+}
+#alcools_forts th {
+    width: 15%;
+    margin-bottom: 50px;
+}
+
+.soft{
+    margin-bottom: 50px;
+ 
+}
+
+.entrees {
+    margin-bottom: 50px;    
+}
+
+.plats{
+    margin-bottom: 50px;
+}
+
+.desserts {
+    margin-bottom: 50px;
+}
+
+.formules {
+    margin-bottom: 50px;
+}
+
+.enfant{
+    margin-bottom: 50px;  
+}
+
+.midi{
+    margin-bottom: 50px;     
+}
+
+.soir{
+    margin-bottom: 50px;     
+}
+
+.grillades{
+    margin-bottom: 50px;      
+}
+
+.gastro{
+    margin-bottom: 50px;  
+}
 
 
+.page_carte {
+    color: aliceblue;
+}
 
-
-
-
-
-
-/*====================== page =========================*/
+ /*====================== page =========================*/
 .page {
     width: 90vw;
     color: white;
@@ -37,150 +103,66 @@ body {
     border-radius: 50px;
     background-color: rgba(49, 35, 16, 0.9);
 }
-
 .page h1 {
     text-transform: capitalize;
     text-align: center;
     text-decoration: underline;
     margin-bottom: 2em;
 }
-
 .page label {
     margin-top: 2em;
 }
-
 /*====================== boutons de validation dans une page =======================*/
-
 .page .validation {
     margin-top: 1em;
     text-align: center;
 }
-
 .page .validation .btn {
     border-radius: 50px;
 }
-
-body>div>div.row.row-cols-1.row-cols-md-3.g-4>div>div>ul>li.list-group-item.genre {
-    text-align: center;
-    background-color: whitesmoke;
-}
-
-body>div>div.row.row-cols-1.row-cols-md-3.g-4>div>div>div.card-footer.bg-dark {
-    border-radius: 0px 0px 50px 50px;
-}
-
-
-
-
-
-
-
 /*===================== boutons validation =============================*/
-
-
-
-
-
-
-
-
-
-
-
+.validation {
+    margin-top: 1em;
+    text-align: center;
+}
 /*=============== button tableau dans page =============*/
-
 .table {
     color: white;
 }
-
 table tr td .btn {
     border-radius: 50px;
 }
-
-
-body>div.page>div>div.boissons.row {
-    border: 2px solid white;
-}
-
-body>div.page>div>div.boissons.row>div.col-6 {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-}
-
-body>div.page>div>div:nth-child(1)>div:nth-child(3) {
-    text-align: center;
-}
-
-body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
-    text-align: center;
-}
-
-/* body>div.page>div>div:nth-child(2)>div:nth-child(3) {
-    text-align: center;
-} */
-
-
 /*======================= Card ========================*/
-
 .card {
     border-radius: 50px;
     color: black;
     margin-bottom: 2em;
 }
-
 .card img {
     border-radius: 50px;
     padding: 1em;
 }
-
 .card-footer .text-muted {
     color: black;
     font-weight: bold;
     font-size: 2.5em;
 }
-
-
-
-
-
-
-
-
-
-
-
 /*================ navbar primaire ==============*/
-
 #nav1 {
     height: 75px;
     border-bottom: 4px solid goldenrod;
     text-transform: capitalize;
 }
-
 #nav1 .btn {
     border: 2px solid goldenrod;
     border-radius: 50px;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*================ navbar secondaire ==============*/
 #nav2 {
     text-transform: capitalize;
     font-weight: bold;
 }
-
 #nav2 .btn {
     background-color: white;
     border: 2px solid brown;
@@ -188,62 +170,16 @@ body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
     font-weight: bold;
     font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*=========================== carousel ==========================*/
-
 .carousel-accueil {
     margin: auto;
     margin-top: 8vh;
     height: 80vh;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*============= template profil unique ============*/
-
 .page .card {
     margin: auto;
 }
-
-
-
-
-
-
-
-
 /*================ Footer ==============*/
 .footer {
     width: 100%;
@@ -256,21 +192,19 @@ body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
     align-content: space-between;
     border-top: 4px solid goldenrod;
 }
-
 .footer .col {
     font-style: italic;
 }
-
 .footer .footer-info {
     color: white;
 }
-
 .footer img {
     width: 20px;
 }
-
 .formulaire .footer-auteur {
     display: flex;
     flex-direction: row;
     align-items: space-around;
 }
+
+

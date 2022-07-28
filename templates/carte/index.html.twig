@@ -1,214 +1,145 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CarteController!
+{% block title %}LA CARTE
 {% endblock %}
 
+
 {% block body %}
-	<div class="page">
-		<div class="container">
-			<div class="boissons row">
-				<div class="col-3 col align-self-center align-items-center">Bière</div>
-
-				<div class="col-6 align-items-center">
-
-					<ul>
-						<li>1664</li>
-						<li>Heineken</li>
-						<li>Hoegaarden</li>
-						<li>Desperados</li>
-						<li>Guiness</li>
-						<li>Leffe</li>
-					</ul>
-				</div>
-				<div class="col-3 col align-self-center align-items-center prix">À partir de 5,50€
-
-				</div>
-			</div>
-			<div class="boissons row">
-				<div class="col-3 col align-self-center align-items-center">
-
-					Cocktails
-				</div>
-				<div class="col-6 align-items-center">
-
-					<ul>
-						<li>Margarita</li>
-						<li>Cosmo</li>
-						<li>Manhattan</li>
-						<li>Mojito</li>
-						<li>Aperol Spritz</li>
-					</ul>
-				</div>
-				<div class="col-3 align-self-center align-items-center prix">8€</div>
+	<div class="card text-white bg-dark mb-3" style="max-width: 100rem;">
 
 
-			</div>
-		</div>
-		<div class="container">
-			<div class="boissons row">
-				<div class="col-3 col align-self-center align-items-center"></div>
-
-				<div class="col-6 align-items-center">
-
-					<ul>
-						<li></li>
-					</ul>
-				</div>
-				<div class="col-3 col align-self-center align-items-center prix"></div>
-			</div>
-			<div class="boissons row">
-				<div class="col-3 col align-self-center align-items-center"></div>
-				<div class="col-6 align-items-center">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
-				<div class="col-3 align-self-center align-items-center prix"></div>
-
-
-			</div>
-		</div>
-
-
-		<h1>
-			Boissons
-		</h1>
+		<h1>LA CARTE</h1>
+		<h1>Boissons</h1>
 		<h2>
 			Alcools
 		</h2>
-		<table id="alcools">
+		<table class="alcools_legers">
 			<tr>
-				<th width="220px">
-					Bière
-				</th>
-				<td width="500px">1164, Heineken, Hoegaarden, Desperados, Guiness, Leffe</td>
-				<td width="200px">À partir de 5,50€</td>
+				<th>Bière</th>
+				<td>1664, Heineken, Hoegaarden, Desperados, Guiness, Leffe</td>
+				<td>À partir de 5,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">
-					Cocktails
-				</th>
-				<td width="500px">Margarita, Cosmo, Manhattan, Mojito, Aperol Spritz</td>
-				<td width="200px">8€</td>
+				<th>Cocktails</th>
+				<td>Margarita, Cosmo, Manhattan, Mojito, Aperol Spritz</td>
+				<td>8€</td>
 			</tr>
 			<tr>
-				<th width="100px">Vins blancs
-				</th>
-				<td width="500px">>Muscat, Riesling, Chablis, Chardonnay, Sauvignon</td>
-				<td width="200px">À partir de 5€</td>
+				<th>Vins blancs</th>
+				<td>Muscat, Riesling, Chablis, Chardonnay, Sauvignon</td>
+				<td >À partir de 5€</td>
 			</tr>
 
 			<tr>
-				<th width="100px">Vins rouges
-				</th>
-				<td width="500px">Lambrusco, Château Minuty, Bordeau,St Emilion, Pinot</td>
-				<td width="200px">À partir de 5€</td>
+				<th>Vins rouges</th>
+				<td>Lambrusco, Château Minuty, Bordeau,St Emilion, Pinot</td>
+				<td >À partir de 5€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Vins rosés</th>
-				<td width="500px">Côtes de Provence, Château Minuty, Coteaux Varois,Ste Croix, Gris de gris</td>
-				<td width="200px">À partir de 5€</td>
+				<td>Côtes de Provence, Château Minuty, Coteaux Varois,Ste Croix, Gris de gris</td>
+				<td >À partir de 5€</td>
+			</tr>
+			<tr>
+				<th>
+					Champagne
+				</th>
+				<td>
+					Taittinger, Bollinger, Moët & Chandon, Veuve Clicquot
+				</td>
+				<td >À partir de 10€</td>
 			</tr>
 		</table>
 
 		<h2>
-			Alcools
+			Alcools forts
 		</h2>
-		<table id="alcools">
+		<table class="alcools_forts">
 			<tr>
-				<th width="220px">Whisky
-				</th>
-				<td width="500px">Jack Daniel’s, JB, Clan campbell, Jameson, Ballantines</td>
-				<td width="200px">À partir de 8€</td>
+				<th>Whisky</th>
+				<td>Jack Daniel’s, JB, Clan campbell, Jameson, Ballantines</td>
+				<td>À partir de 8€</td>
 			</tr>
 
 			<tr>
-				<th width="100px">
+				<th>
 					Gin
 				</th>
-				<td width="500px">Gibson’s, Gordon’s, Bosford, Old lady, Hendricks</td>
-				<td width="200px">À partir de 8€</td>
+				<td>Gibson’s, Gordon’s, Bosford, Old lady, Hendricks</td>
+				<td >À partir de 8€</td>
 			</tr>
 
 			<tr>
-				<th width="100px">
+				<th>
 					Vodka
 				</th>
-				<td width="500px">Absolute, Grey Goose, Belvedere, Crystal, Beluga</td>
-				<td width="200px">À partir de 8€</td>
+				<td>Absolute, Grey Goose, Belvedere, Crystal, Beluga</td>
+				<td >À partir de 8€</td>
 			</tr>
 
 			<tr>
-				<th width="100px">
+				<th>
 					Rhum
 				</th>
-				<td width="500px">Saint James, Rivière malte, JM, Don papa</td>
-				<td width="200px">À partir de 8€</td>
+				<td>Saint James, Rivière malte, JM, Don papa</td>
+				<td >À partir de 8€</td>
 			</tr>
-			<tr>
-				<th width="100px">
-					Champagne
-				</th>
-				<td width="500px">
-					Taittinger, Bollinger, Moët & Chandon, Veuve Clicquot
-				</td>
-				<td width="200px">À partir de 10€</td>
-			</tr>
+
 		</table>
 
 		<h2>
 			Boissons non alcoolisées
 		</h2>
-		<table id="boissons sans alcool">
+		<table class="soft">
 			<tr>
-				<th width="220px">Sodas
+				<th>Sodas
 				</th>
-				<td width="500px">Coca, Coca light, Fanta, Sprite, Ice tea, diabolo</td>
-				<td width="200px">4€</td>
+				<td>Coca, Coca light, Fanta, Sprite, Ice tea, diabolo</td>
+				<td >4€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Jus de fruits
 				</th>
-				<td width="500px">Pomme, orange, abricot, raisin, ananas</td>
-				<td width="200px">3,50€</td>
+				<td>Pomme, orange, abricot, raisin, ananas</td>
+				<td >3,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Milkshakes
 				</th>
-				<td width="500px">
+				<td>
 					Vanille, banane, chocolat, café
 				</td>
-				<td width="200px">6€</td>
+				<td >6€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Cafés
 				</th>
-				<td width="500px">
+				<td>
 					Espresso, noisette, crème, capuccino, allongé
 				</td>
-				<td width="200px">2,50€</td>
+				<td >2,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Thés
 				</th>
-				<td width="500px">
+				<td>
 					Noir, vert, earl grey, verveine
 				</td>
-				<td width="200px">3,50€</td>
+				<td >3,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">
+				<th>
 					Granitas
 				</th>
-				<td width="500px">
+				<td>
 					Coca, fraise, citron, menthe, passion
 				</td>
-				<td width="200px">5,50€</td>
+				<td >5,50€</td>
 			</tr>
 		</table>
 
@@ -218,129 +149,129 @@
 		<h2>
 			Entrées
 		</h2>
-		<table id="entrees">
+		<table class="entrees">
 			<tr>
-				<th width="100px">
+				<th>
 					Assiette de charcuterie
 				</th>
-				<td width="500px">Jambon de parme, saucisson, pâté de campagne, jambon blanc, speck</td>
-				<td width="200px">9,90€</td>
+				<td>Jambon de parme, saucisson, pâté de campagne, jambon blanc, speck</td>
+				<td >9,90€</td>
 			</tr>
 			<tr>
-				<th width="220px">Carpaccio de bœuf</th>
-				<td width="500px">Boeuf finement tranché et son huile d’olive au pesto</td>
-				<td width="200px">10,90€</td>
+				<th>Carpaccio de bœuf</th>
+				<td>Boeuf finement tranché et son huile d’olive au pesto</td>
+				<td >10,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Salade Caesar</th>
-				<td width="500px">Salade, tomate, poulet, parmesan, œuf, croûtons, sauce caesar</td>
-				<td width="200px">9,90€</td>
+				<th>Salade Caesar</th>
+				<td>Salade, tomate, poulet, parmesan, œuf, croûtons, sauce caesar</td>
+				<td >9,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Salade de chèvre chaud</th>
-				<td width="500px">Salade, chèvre chaud sur son toast grillé, tomate sauce vinaigrette</td>
-				<td width="200px">9,90€</td>
+				<th>Salade de chèvre chaud</th>
+				<td>Salade, chèvre chaud sur son toast grillé, tomate sauce vinaigrette</td>
+				<td >9,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Foie gras</th>
-				<td width="500px">Foie gras au sel de guérande sur son pain brioché toasté, salade</td>
-				<td width="200px">10,90€</td>
+				<th>Foie gras</th>
+				<td>Foie gras au sel de guérande sur son pain brioché toasté, salade</td>
+				<td >10,90€</td>
 			</tr>
 		</table>
 		<h2>
-			Entrées
+			Plats
 		</h2>
-		<table id="plats">
+		<table class="plats">
 			<tr>
-				<th width="100px">Steak haché frites</th>
-				<td width="500px">Steak haché, frites, salade</td>
-				<td width="200px">10,90€</td>
+				<th>Steak haché frites</th>
+				<td>Steak haché, frites, salade</td>
+				<td >10,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Croque Monsieur</th>
-				<td width="500px">Croque monsieur jambon fromage salade
+				<th>Croque Monsieur</th>
+				<td>Croque monsieur jambon fromage salade
 				</td>
-				<td width="200px">7,90€</td>
+				<td >7,90€</td>
 			</tr>
 			<tr>
-				<th width="200px">Pâtes bolognaises</th>
-				<td width="500px">Pâtes à la viande hachée et sauce tomate</td>
-				<td width="200px">7,90€</td>
+				<th >Pâtes bolognaises</th>
+				<td>Pâtes à la viande hachée et sauce tomate</td>
+				<td >7,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Grillades mixtes</th>
-				<td width="500px">Agneau, boeuf, poulet</td>
-				<td width="200px">23,90€</td>
+				<th>Grillades mixtes</th>
+				<td>Agneau, boeuf, poulet</td>
+				<td >23,90€</td>
 			</tr>
 			<tr>
-				<th width="220px">Côte de bœuf Black Angus</th>
-				<td width="500px">Côte de bœuf « Black Angus », Pomme de terre au four, haricots verts, sauce au choix</td>
-				<td width="200px">24,90€</td>
+				<th>Côte de bœuf Black Angus</th>
+				<td>Côte de bœuf « Black Angus », Pomme de terre au four, haricots verts, sauce au choix</td>
+				<td >24,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Escalope Milanaise</th>
-				<td width="500px">Escalope de poulet panée à la milanaise, spaghettis
+				<th>Escalope Milanaise</th>
+				<td>Escalope de poulet panée à la milanaise, spaghettis
 				</td>
-				<td width="200px">13,90€</td>
+				<td >13,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Tartare de bœuf</th>
-				<td width="500px">Tartare de bœuf coupé au couteau, frites</td>
-				<td width="200px">13,90€</td>
+				<th>Tartare de bœuf</th>
+				<td>Tartare de bœuf coupé au couteau, frites</td>
+				<td >13,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Pièce du boucher</th>
-				<td width="500px">Pièce de bœuf sélectionnée par le chef, haricots verts, frites, sauce au choix
+				<th>Pièce du boucher</th>
+				<td>Pièce de bœuf sélectionnée par le chef, haricots verts, frites, sauce au choix
 				</td>
-				<td width="200px">13,90€</td>
+				<td >13,90€</td>
 			</tr>
 			<tr>
-				<th width="100px">Suprême de poulet</th>
-				<td width="500px">Suprême de poulet, sauce crème et champignons, frites, riz</td>
-				<td width="200px">13,90€</td>
+				<th>Suprême de poulet</th>
+				<td>Suprême de poulet, sauce crème et champignons, frites, riz</td>
+				<td >13,90€</td>
 			</tr>
 		</table>
 		<h2>
 			Desserts
 		</h2>
-		<table id="desserts">
+		<table class="desserts">
 			<tr>
-				<th width="220px">Fondant au chocolat
+				<th>Fondant au chocolat
 				</th>
-				<td width="500px">Mi-cuit au chocolat fondant</td>
-				<td width="200px">5,50€</td>
+				<td>Mi-cuit au chocolat fondant</td>
+				<td >5,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">Crème brûlée</th>
-				<td width="500px">Crème brûlées au caramel</td>
-				<td width="200px">5,50€</td>
+				<th>Crème brûlée</th>
+				<td>Crème brûlées au caramel</td>
+				<td >5,50€</td>
 			</tr>
 			<tr>
-				<th width="220px">Fromage blanc coulis</th>
-				<td width="500px">Fromage blanc coulis de framboise, fraise, casis</td>
-				<td width="200px">5,50€</td>
+				<th>Fromage blanc coulis</th>
+				<td>Fromage blanc coulis de framboise, fraise, casis</td>
+				<td >5,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">Glace</th>
-				<td width="500px">Chocolat, vanille, fraise, citron, pistache, café</td>
-				<td width="200px">5,50€</td>
+				<th>Glace</th>
+				<td>Chocolat, vanille, fraise, citron, pistache, café</td>
+				<td >5,50€</td>
 			</tr>
 			<tr>
-				<th width="100px">Assiette de fromage</th>
-				<td width="500px">Conté, bleu, brie, chèvre, morbier</td>
-				<td width="200px">9,90€</td>
+				<th>Assiette de fromage</th>
+				<td>Conté, bleu, brie, chèvre, morbier</td>
+				<td >9,90€</td>
 			</tr>
 		</table>
 	</table>
-	<h1>FORMULES</h1>
-	<table id="formules">
+	<h1>Formules</h1>
+	<table class="formules">
 
 		<h3>MENU ENFANT 9€</h3>
-		<table>
+		<table class="enfant">
 			<tr>
-				<th width="220px">Entrée</th>
-				<th width="400px">Plat</th>
-				<th width="220px">Dessert</th>
+				<th>Entrée</th>
+				<th>Plat</th>
+				<th>Dessert</th>
 			</tr>
 			<tr>
 				<td></td>
@@ -360,12 +291,12 @@
 		</table>
 
 
-		<h3>MENU MIDI 15€</h3>
-		<table>
+		<h3>MENU MclassI 15€</h3>
+		<table class="mclassi">
 			<tr>
-				<th width="220px">Entrée</th>
-				<th width="400px">Plat</th>
-				<th width="220px">Dessert</th>
+				<th>Entrée</th>
+				<th>Plat</th>
+				<th>Dessert</th>
 			</tr>
 			<tr>
 				<td></td>
@@ -385,11 +316,11 @@
 		</table>
 
 		<h3>MENU SOIR 24€</h3>
-		<table>
+		<table class="soir">
 			<tr>
-				<th width="220px">Entrée</th>
-				<th width="400px">Plat</th>
-				<th width="220px">Dessert</th>
+				<th>Entrée</th>
+				<th>Plat</th>
+				<th>Dessert</th>
 			</tr>
 			<tr>
 				<td>Petit carpaccio</td>
@@ -409,11 +340,11 @@
 		</table>
 
 		<h3>MENU GRILLADES 29€</h3>
-		<table>
+		<table class="grillades">
 			<tr>
-				<th width="220px">Entrée</th>
-				<th width="400px">Plat</th>
-				<th width="220px">Dessert</th>
+				<th>Entrée</th>
+				<th>Plat</th>
+				<th>Dessert</th>
 			</tr>
 			<tr>
 				<td>Petit carpaccio</td>
@@ -428,11 +359,11 @@
 		</table>
 
 		<h3>MENU GASTRONOMIQUE 39€</h3>
-		<table>
+		<table class="gastro">
 			<tr>
-				<th width="220px">Entrée</th>
-				<th width="400px">Plat</th>
-				<th width="220px">Dessert</th>
+				<th>Entrée</th>
+				<th>Plat</th>
+				<th>Dessert</th>
 			</tr>
 			<tr>
 				<td>Petit carpaccio</td>
@@ -451,4 +382,5 @@
 			</tr>
 		</table>
 	</table>
+	</div>
 </div>{% endblock %}
