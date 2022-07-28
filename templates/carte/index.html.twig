@@ -4,35 +4,451 @@
 {% endblock %}
 
 {% block body %}
-	<style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style>
+	<div class="page">
+		<div class="container">
+			<div class="boissons row">
+				<div class="col-3 col align-self-center align-items-center">Bière</div>
 
-	<div class="example-wrapper">
-		<h1>Hello
-			{{ controller_name }}! ✅</h1>
+				<div class="col-6 align-items-center">
 
-		This friendly message is coming from:
-		<ul>
-			<li>Your controller at
-				<code>
-					<a href="{{ 'D:/wamp64/www/Bun/bistrot_bnf/src/Controller/CarteController.php'|file_link(0) }}">src/Controller/CarteController.php</a>
-				</code>
-			</li>
-			<li>Your template at
-				<code>
-					<a href="{{ 'D:/wamp64/www/Bun/bistrot_bnf/templates/carte/index.html.twig'|file_link(0) }}">templates/carte/index.html.twig</a>
-				</code>
-			</li>
-		</ul>
-	</div>
-{% endblock %}
+					<ul>
+						<li>1664</li>
+						<li>Heineken</li>
+						<li>Hoegaarden</li>
+						<li>Desperados</li>
+						<li>Guiness</li>
+						<li>Leffe</li>
+					</ul>
+				</div>
+				<div class="col-3 col align-self-center align-items-center prix">À partir de 5,50€
+
+				</div>
+			</div>
+			<div class="boissons row">
+				<div class="col-3 col align-self-center align-items-center">
+
+					Cocktails
+				</div>
+				<div class="col-6 align-items-center">
+
+					<ul>
+						<li>Margarita</li>
+						<li>Cosmo</li>
+						<li>Manhattan</li>
+						<li>Mojito</li>
+						<li>Aperol Spritz</li>
+					</ul>
+				</div>
+				<div class="col-3 align-self-center align-items-center prix">8€</div>
+
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="boissons row">
+				<div class="col-3 col align-self-center align-items-center"></div>
+
+				<div class="col-6 align-items-center">
+
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-3 col align-self-center align-items-center prix"></div>
+			</div>
+			<div class="boissons row">
+				<div class="col-3 col align-self-center align-items-center"></div>
+				<div class="col-6 align-items-center">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+				<div class="col-3 align-self-center align-items-center prix"></div>
+
+
+			</div>
+		</div>
+
+
+		<h1>
+			Boissons
+		</h1>
+		<h2>
+			Alcools
+		</h2>
+		<table id="alcools">
+			<tr>
+				<th width="220px">
+					Bière
+				</th>
+				<td width="500px">1164, Heineken, Hoegaarden, Desperados, Guiness, Leffe</td>
+				<td width="200px">À partir de 5,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Cocktails
+				</th>
+				<td width="500px">Margarita, Cosmo, Manhattan, Mojito, Aperol Spritz</td>
+				<td width="200px">8€</td>
+			</tr>
+			<tr>
+				<th width="100px">Vins blancs
+				</th>
+				<td width="500px">>Muscat, Riesling, Chablis, Chardonnay, Sauvignon</td>
+				<td width="200px">À partir de 5€</td>
+			</tr>
+
+			<tr>
+				<th width="100px">Vins rouges
+				</th>
+				<td width="500px">Lambrusco, Château Minuty, Bordeau,St Emilion, Pinot</td>
+				<td width="200px">À partir de 5€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Vins rosés</th>
+				<td width="500px">Côtes de Provence, Château Minuty, Coteaux Varois,Ste Croix, Gris de gris</td>
+				<td width="200px">À partir de 5€</td>
+			</tr>
+		</table>
+
+		<h2>
+			Alcools
+		</h2>
+		<table id="alcools">
+			<tr>
+				<th width="220px">Whisky
+				</th>
+				<td width="500px">Jack Daniel’s, JB, Clan campbell, Jameson, Ballantines</td>
+				<td width="200px">À partir de 8€</td>
+			</tr>
+
+			<tr>
+				<th width="100px">
+					Gin
+				</th>
+				<td width="500px">Gibson’s, Gordon’s, Bosford, Old lady, Hendricks</td>
+				<td width="200px">À partir de 8€</td>
+			</tr>
+
+			<tr>
+				<th width="100px">
+					Vodka
+				</th>
+				<td width="500px">Absolute, Grey Goose, Belvedere, Crystal, Beluga</td>
+				<td width="200px">À partir de 8€</td>
+			</tr>
+
+			<tr>
+				<th width="100px">
+					Rhum
+				</th>
+				<td width="500px">Saint James, Rivière malte, JM, Don papa</td>
+				<td width="200px">À partir de 8€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Champagne
+				</th>
+				<td width="500px">
+					Taittinger, Bollinger, Moët & Chandon, Veuve Clicquot
+				</td>
+				<td width="200px">À partir de 10€</td>
+			</tr>
+		</table>
+
+		<h2>
+			Boissons non alcoolisées
+		</h2>
+		<table id="boissons sans alcool">
+			<tr>
+				<th width="220px">Sodas
+				</th>
+				<td width="500px">Coca, Coca light, Fanta, Sprite, Ice tea, diabolo</td>
+				<td width="200px">4€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Jus de fruits
+				</th>
+				<td width="500px">Pomme, orange, abricot, raisin, ananas</td>
+				<td width="200px">3,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Milkshakes
+				</th>
+				<td width="500px">
+					Vanille, banane, chocolat, café
+				</td>
+				<td width="200px">6€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Cafés
+				</th>
+				<td width="500px">
+					Espresso, noisette, crème, capuccino, allongé
+				</td>
+				<td width="200px">2,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Thés
+				</th>
+				<td width="500px">
+					Noir, vert, earl grey, verveine
+				</td>
+				<td width="200px">3,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">
+					Granitas
+				</th>
+				<td width="500px">
+					Coca, fraise, citron, menthe, passion
+				</td>
+				<td width="200px">5,50€</td>
+			</tr>
+		</table>
+
+		<h1>
+			Plats à la carte
+		</h1>
+		<h2>
+			Entrées
+		</h2>
+		<table id="entrees">
+			<tr>
+				<th width="100px">
+					Assiette de charcuterie
+				</th>
+				<td width="500px">Jambon de parme, saucisson, pâté de campagne, jambon blanc, speck</td>
+				<td width="200px">9,90€</td>
+			</tr>
+			<tr>
+				<th width="220px">Carpaccio de bœuf</th>
+				<td width="500px">Boeuf finement tranché et son huile d’olive au pesto</td>
+				<td width="200px">10,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Salade Caesar</th>
+				<td width="500px">Salade, tomate, poulet, parmesan, œuf, croûtons, sauce caesar</td>
+				<td width="200px">9,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Salade de chèvre chaud</th>
+				<td width="500px">Salade, chèvre chaud sur son toast grillé, tomate sauce vinaigrette</td>
+				<td width="200px">9,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Foie gras</th>
+				<td width="500px">Foie gras au sel de guérande sur son pain brioché toasté, salade</td>
+				<td width="200px">10,90€</td>
+			</tr>
+		</table>
+		<h2>
+			Entrées
+		</h2>
+		<table id="plats">
+			<tr>
+				<th width="100px">Steak haché frites</th>
+				<td width="500px">Steak haché, frites, salade</td>
+				<td width="200px">10,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Croque Monsieur</th>
+				<td width="500px">Croque monsieur jambon fromage salade
+				</td>
+				<td width="200px">7,90€</td>
+			</tr>
+			<tr>
+				<th width="200px">Pâtes bolognaises</th>
+				<td width="500px">Pâtes à la viande hachée et sauce tomate</td>
+				<td width="200px">7,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Grillades mixtes</th>
+				<td width="500px">Agneau, boeuf, poulet</td>
+				<td width="200px">23,90€</td>
+			</tr>
+			<tr>
+				<th width="220px">Côte de bœuf Black Angus</th>
+				<td width="500px">Côte de bœuf « Black Angus », Pomme de terre au four, haricots verts, sauce au choix</td>
+				<td width="200px">24,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Escalope Milanaise</th>
+				<td width="500px">Escalope de poulet panée à la milanaise, spaghettis
+				</td>
+				<td width="200px">13,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Tartare de bœuf</th>
+				<td width="500px">Tartare de bœuf coupé au couteau, frites</td>
+				<td width="200px">13,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Pièce du boucher</th>
+				<td width="500px">Pièce de bœuf sélectionnée par le chef, haricots verts, frites, sauce au choix
+				</td>
+				<td width="200px">13,90€</td>
+			</tr>
+			<tr>
+				<th width="100px">Suprême de poulet</th>
+				<td width="500px">Suprême de poulet, sauce crème et champignons, frites, riz</td>
+				<td width="200px">13,90€</td>
+			</tr>
+		</table>
+		<h2>
+			Desserts
+		</h2>
+		<table id="desserts">
+			<tr>
+				<th width="220px">Fondant au chocolat
+				</th>
+				<td width="500px">Mi-cuit au chocolat fondant</td>
+				<td width="200px">5,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">Crème brûlée</th>
+				<td width="500px">Crème brûlées au caramel</td>
+				<td width="200px">5,50€</td>
+			</tr>
+			<tr>
+				<th width="220px">Fromage blanc coulis</th>
+				<td width="500px">Fromage blanc coulis de framboise, fraise, casis</td>
+				<td width="200px">5,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">Glace</th>
+				<td width="500px">Chocolat, vanille, fraise, citron, pistache, café</td>
+				<td width="200px">5,50€</td>
+			</tr>
+			<tr>
+				<th width="100px">Assiette de fromage</th>
+				<td width="500px">Conté, bleu, brie, chèvre, morbier</td>
+				<td width="200px">9,90€</td>
+			</tr>
+		</table>
+	</table>
+	<h1>FORMULES</h1>
+	<table id="formules">
+
+		<h3>MENU ENFANT 9€</h3>
+		<table>
+			<tr>
+				<th width="220px">Entrée</th>
+				<th width="400px">Plat</th>
+				<th width="220px">Dessert</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Steak haché</td>
+				<td>Au choix</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>croque monsieur</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Pâtes bolognaises</td>
+				<td></td>
+			</tr>
+		</table>
+
+
+		<h3>MENU MIDI 15€</h3>
+		<table>
+			<tr>
+				<th width="220px">Entrée</th>
+				<th width="400px">Plat</th>
+				<th width="220px">Dessert</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Pièce de bœuf</td>
+				<td>Au choix</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>croque monsieur</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Pâtes bolognaises</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h3>MENU SOIR 24€</h3>
+		<table>
+			<tr>
+				<th width="220px">Entrée</th>
+				<th width="400px">Plat</th>
+				<th width="220px">Dessert</th>
+			</tr>
+			<tr>
+				<td>Petit carpaccio</td>
+				<td>Tartare de boeuf</td>
+				<td>Au choix</td>
+			</tr>
+			<tr>
+				<td>Salade chèvre ou salade Caesar</td>
+				<td>Pièce du boucher</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Escalope Milanaise</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h3>MENU GRILLADES 29€</h3>
+		<table>
+			<tr>
+				<th width="220px">Entrée</th>
+				<th width="400px">Plat</th>
+				<th width="220px">Dessert</th>
+			</tr>
+			<tr>
+				<td>Petit carpaccio</td>
+				<td>Grillades mixtes</td>
+				<td>Au choix</td>
+			</tr>
+			<tr>
+				<td>Salade chèvre ou salade Caesar</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+		<h3>MENU GASTRONOMIQUE 39€</h3>
+		<table>
+			<tr>
+				<th width="220px">Entrée</th>
+				<th width="400px">Plat</th>
+				<th width="220px">Dessert</th>
+			</tr>
+			<tr>
+				<td>Petit carpaccio</td>
+				<td>Tartare de bœuf XXL au roquefort frites salade</td>
+				<td>Au choix</td>
+			</tr>
+			<tr>
+				<td>Salade chèvre ou salade Caesar</td>
+				<td>Cote de boeuf « black angus » haricots verts</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Foie gras</td>
+				<td>Suprême de poulet au foie gras</td>
+				<td></td>
+			</tr>
+		</table>
+	</table>
+</div>{% endblock %}

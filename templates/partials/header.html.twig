@@ -49,6 +49,13 @@
 									<a class="dropdown-item" href="{{ path ('app_formule_index') }}">les formules</a>
 								</li>
 								<li>
+									<a class="dropdown-item" href="{{ path ('app_boissons_index') }}">les boissons</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="{{ path ('app_boissons_categorie_index') }}">les catégories de boissons</a>
+
+								</li>
+								<li>
 									<a class="dropdown-item" href="#">les réservations</a>
 								</li>
 								<li>
@@ -93,7 +100,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-transparent" id="nav2">
 		<div class="container-fluid">
-			<a type="button" href="" class="btn">la carte</a>
+			<a type="button" href="{{ path ('app_carte') }}" class="btn">la carte</a>
 			<a type="button" href="" class="btn">les formules</a>
 			<a type="button" href="" class="btn">réserver une table</a>
 			<a type="button" href="" class="btn">commander</a>

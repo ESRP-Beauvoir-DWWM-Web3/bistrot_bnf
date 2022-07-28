@@ -41,6 +41,7 @@ class FormuleController extends AbstractController
                 // on renseigne la propriété picture de l'article avec ce nom de fichier.
                 $formule->setPhoto($fileName);
             }
+            
             $formuleRepository->add($formule, true);
 
             return $this->redirectToRoute('app_formule_index', [], Response::HTTP_SEE_OTHER);
