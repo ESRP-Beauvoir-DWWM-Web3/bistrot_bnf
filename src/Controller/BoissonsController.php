@@ -30,15 +30,6 @@ class BoissonsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // on récupère le fichier présent dans le formulaire
-            $picture = $form->get('photo')->getData();
-            // si le champs picture est renseigné (si $picture existe)
-            if($picture){
-                // on récupère le nom du fichier téléversé en même temps qu'il est placé dans le dossier public/uploads/images/
-                $fileName = $fileUploader->upload($picture);
-                // on renseigne la propriété picture de l'article avec ce nom de fichier.
-                $boisson->setPhoto($fileName);
-            }
             $boissonsRepository->add($boisson, true);
 
             return $this->redirectToRoute('app_boissons_index', [], Response::HTTP_SEE_OTHER);
@@ -65,15 +56,6 @@ class BoissonsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // on récupère le fichier présent dans le formulaire
-            $picture = $form->get('photo')->getData();
-            // si le champs picture est renseigné (si $picture existe)
-            if($picture){
-                // on récupère le nom du fichier téléversé en même temps qu'il est placé dans le dossier public/uploads/images/
-                $fileName = $fileUploader->upload($picture);
-                // on renseigne la propriété picture de l'article avec ce nom de fichier.
-                $boisson->setPhoto($fileName);
-            }
             $boissonsRepository->add($boisson, true);
 
             return $this->redirectToRoute('app_boissons_index', [], Response::HTTP_SEE_OTHER);

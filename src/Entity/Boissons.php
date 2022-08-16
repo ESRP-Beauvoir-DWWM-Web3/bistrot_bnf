@@ -20,9 +20,6 @@ class Boissons
     #[ORM\Column(type: Types::DECIMAL, precision: 4, scale: 2)]
     private ?string $prix = null;
 
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $photo = null;
-
     #[ORM\ManyToOne(inversedBy: 'boissons')]
     #[ORM\JoinColumn(nullable: false)]
     private ?BoissonsCategorie $categorie = null;
@@ -52,18 +49,6 @@ class Boissons
     public function setPrix(string $prix): self
     {
         $this->prix = $prix;
-
-        return $this;
-    }
-
-    public function getPhoto(): ?string
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto(?string $photo): self
-    {
-        $this->photo = $photo;
 
         return $this;
     }

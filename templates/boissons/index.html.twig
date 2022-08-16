@@ -13,7 +13,6 @@
 					<th>Id</th>
 					<th>Nom</th>
 					<th>Prix</th>
-					<th>Photo</th>
 					<th>actions</th>
 				</tr>
 			</thead>
@@ -23,7 +22,6 @@
 						<td>{{ boisson.id }}</td>
 						<td>{{ boisson.nom }}</td>
 						<td>{{ boisson.prix }}</td>
-						<td>{{ boisson.photo }}</td>
 						<td>
 							<a href="{{ path('app_boissons_show', {'id': boisson.id}) }}" class="btn btn-light">montrer</a>
 							<a href="{{ path('app_boissons_edit', {'id': boisson.id}) }}" class="btn btn-warning">éditer</a>

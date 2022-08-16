@@ -19,8 +19,8 @@
 					<tr>
 						<td>{{ caroussel.id }}</td>
 						<td>
-							<a href="{{ path('app_caroussel_show', {'id': caroussel.id}) }}">show</a>
-							<a href="{{ path('app_caroussel_edit', {'id': caroussel.id}) }}">edit</a>
+							<a href="{{ path('app_caroussel_show', {'id': caroussel.id}) }}" class="btn btn-light">montrer</a>
+							<a href="{{ path('app_caroussel_edit', {'id': caroussel.id}) }}" class="btn btn-warning">éditier</a>
 						</td>
 					</tr>
 				{% else %}
@@ -31,6 +31,6 @@
 			</tbody>
 		</table>
 
-		<a href="{{ path('app_caroussel_new') }}">Create new</a>
+		<a href="{{ path('app_caroussel_new') }}" class="btn btn-primary">Créer un carroussel</a>
 	</div>
 {% endblock %}

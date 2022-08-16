@@ -21,8 +21,8 @@
 						<td>{{ boissons_categorie.id }}</td>
 						<td>{{ boissons_categorie.nom }}</td>
 						<td>
-							<a href="{{ path('app_boissons_categorie_show', {'id': boissons_categorie.id}) }}">show</a>
-							<a href="{{ path('app_boissons_categorie_edit', {'id': boissons_categorie.id}) }}">edit</a>
+							<a href="{{ path('app_boissons_categorie_show', {'id': boissons_categorie.id}) }}" class="btn btn-light">montrer</a>
+							<a href="{{ path('app_boissons_categorie_edit', {'id': boissons_categorie.id}) }}" class="btn btn-warning">éditier</a>
 						</td>
 					</tr>
 				{% else %}
@@ -33,6 +33,6 @@
 			</tbody>
 		</table>
 
-		<a href="{{ path('app_boissons_categorie_new') }}">Create new</a>
+		<a href="{{ path('app_boissons_categorie_new') }}" class="btn btn-primary">Créer une catégorie de boisson</a>
 	</div>
 {% endblock %}

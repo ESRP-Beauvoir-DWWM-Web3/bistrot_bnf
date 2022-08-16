@@ -274,3 +274,7 @@ body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
     flex-direction: row;
     align-items: space-around;
 }
+
+.la_carte img {
+    width: 100%;
+}

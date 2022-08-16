@@ -32,30 +32,6 @@ class BoissonsType extends AbstractType
                     'class' => 'form-control'
                 ]
             ])
-            ->add('photo', FileType::class, [
-                'label' => 'Photo :',
-                'mapped' => false,
-                'required' => false,
-                'constraints' => [
-                    new File([
-                        'maxSize'=>'16384k',
-                        'maxSizeMessage'=>'Taille de fichier trop grande',
-                        'mimeTypes'=>[
-                            'image/jpeg',
-                            'image/png',
-                            'image/svg',
-                            'image/jpg',
-                            'image/webp',
-                            'image/bmp',
-                        ],
-                        'mimeTypesMessage'=>'Extension de fichier invalide',
-                    ])
-                    ],
-                'attr'=>[
-                    'class'=>'form-control',
-                ],
-                'data_class'=>null,
-            ])
             ->add('categorie', EntityType::class, [
                 'class' => BoissonsCategorie::class,
                 'choice_label' => 'nom',

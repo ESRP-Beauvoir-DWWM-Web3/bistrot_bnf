@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Formule;
 use App\Form\FormuleType;
+use App\Service\FileUploader;
 use App\Repository\FormuleRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/formule')]
 class FormuleController extends AbstractController
@@ -22,7 +23,7 @@ class FormuleController extends AbstractController
     }
 
     #[Route('/new', name: 'app_formule_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, FormuleRepository $formuleRepository): Response
+    public function new(Request $request, FileUploader $fileUploader, FormuleRepository $formuleRepository): Response
     {
         $formule = new Formule();
         $form = $this->createForm(FormuleType::class, $formule);
@@ -60,7 +61,7 @@ class FormuleController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_formule_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Formule $formule, FormuleRepository $formuleRepository): Response
+    public function edit(Request $request, FileUploader $fileUploader, Formule $formule, FormuleRepository $formuleRepository): Response
     {
         $form = $this->createForm(FormuleType::class, $formule);
         $form->handleRequest($request);
