@@ -77,7 +77,10 @@ body>div>div.row.row-cols-1.row-cols-md-3.g-4>div>div>div.card-footer.bg-dark {
 
 /*===================== boutons validation =============================*/
 
-
+.new-formule {
+    margin-top: 2em;
+    text-align: center;
+}
 
 
 
@@ -214,8 +217,9 @@ body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
 }
 
 
-.carousel-accueil image {
-    width: 60% !important;
+.carousel-accueil img {Ò
+    width: 70vw !important;
+    height: 60vh;
     border: gold !important;
     margin-top: 4em;
 

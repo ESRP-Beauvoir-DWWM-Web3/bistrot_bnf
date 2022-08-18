@@ -5,10 +5,7 @@ namespace App\Controller;
 use App\Entity\Formule;
 use App\Form\FormuleType;
 use App\Service\FileUploader;
-<<<<<<< HEAD
-=======
 use App\Controller\FormuleController;
->>>>>>> 6bf105444e97377c058d69954eb4bca13af3cb4d
 use App\Repository\FormuleRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -27,11 +24,8 @@ class FormuleController extends AbstractController
     }
 
     #[Route('/new', name: 'app_formule_new', methods: ['GET', 'POST'])]
-<<<<<<< HEAD
     public function new(Request $request, FileUploader $fileUploader, FormuleRepository $formuleRepository): Response
-=======
-    public function new(Request $request, FormuleRepository $formuleRepository, FileUploader $fileUploader): Response
->>>>>>> 6bf105444e97377c058d69954eb4bca13af3cb4d
+
     {
         $formule = new Formule();
         $form = $this->createForm(FormuleType::class, $formule);

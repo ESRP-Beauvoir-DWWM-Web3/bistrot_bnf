@@ -7,7 +7,7 @@
 	<div class="page">
 		<h1>liste des formules</h1>
 
-		<table class="table">
+{# 		<table class="table">
 			<thead>
 				<tr>
 					<th>Id</th>
@@ -38,9 +38,8 @@
 					</tr>
 				{% endfor %}
 			</tbody>
-		</table>
+		</table> #}
 
-		<a href="{{ path('app_formule_new') }}" class="btn btn-primary">Créer une formule</a>
 
 		{# Mise en place en template card groupe à faire avec une boucle #}
 
@@ -48,11 +47,7 @@
 			{% for formule in formules %}
 				<div class="col">
 					<div class="card h-100">
-<<<<<<< HEAD
 						<img src="{{ asset ('uploads/images/') }}{{ formule.photo }}" class="card-img-top" alt="...">
-=======
-						<img src="{{ asset ('uploads/images/') }}{{ formule.photo }}" class="card-img-top" alt="photo de formule">
->>>>>>> 6bf105444e97377c058d69954eb4bca13af3cb4d
 						<div class="card-body">
 							<h5 class="card-title">{{ formule.nom }}</h5>
 
@@ -75,4 +70,7 @@
 			</div>
 		{% endfor %}
 	</div>
-</div></div>{% endblock %}
+		<a href="{{ path ('app_formule_new') }}" class="btn btn-primary new-formule">Créer une formule</a>
+</div>
+</div>
+{% endblock %}
