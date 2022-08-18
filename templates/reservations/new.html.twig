@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+		{#Insertion d'un calendar#}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.css" integrity="sha256-jLWPhwkAHq1rpueZOKALBno3eKP3m4IMB131kGhAlRQ=" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+<div class="page new_reservation">
+
+
+		{#Insertion d'un calendar#}
+		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.2/main.min.js" integrity="sha256-sR+oJaZ3c0FHR6+kKaX1zeXReUGbzuNI8QTKpGHE0sg=" crossorigin="anonymous"></script>
+
+    <h1>Create new Reservations</h1>
+
+    {{ include('reservations/_form.html.twig') }}
+
+    <a href="{{ path('app_reservations_index') }}">back to list</a>
+
+</div>
+
+{% endblock %}
