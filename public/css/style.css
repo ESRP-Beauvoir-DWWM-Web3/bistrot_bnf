@@ -6,7 +6,7 @@
     margin-left: 50vw;
     margin-right: 50vw;
 }
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 body {
     background-image: url('../img/wallpaper/fond-ecran.jpg');
@@ -214,24 +214,12 @@ body>div.page>div>div>div>.col-3.col.align-self-center.align-items-center.prix {
 }
 
 
-.carousel-accueil image {
+.carousel-accueil img {
     width: 60% !important;
     border: gold !important;
     margin-top: 4em;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
