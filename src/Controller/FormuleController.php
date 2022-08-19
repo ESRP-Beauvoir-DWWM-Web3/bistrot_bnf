@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Formule;
 use App\Form\FormuleType;
+use App\Service\FileUploader;
+use App\Controller\FormuleController;
 use App\Repository\FormuleRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/formule')]
 class FormuleController extends AbstractController
@@ -22,13 +24,24 @@ class FormuleController extends AbstractController
     }
 
     #[Route('/new', name: 'app_formule_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, FormuleRepository $formuleRepository): Response
+    public function new(Request $request, FormuleRepository $formuleRepository, FileUploader $fileUploader): Response
     {
         $formule = new Formule();
         $form = $this->createForm(FormuleType::class, $formule);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            // on récupère le fichier présent dans le formulaire
+            $picture = $form->get('photo')->getData();
+            // si le champs picture est renseigné (si $picture existe)
+            if($picture){
+                // on récupère le nom du fichier téléversé en même temps qu'il est placé dans le dossier public/uploads/images/
+                $fileName = $fileUploader->upload($picture);
+                // on renseigne la propriété picture de l'article avec ce nom de fichier.
+                $formule->setPhoto($fileName);
+            }
+            
             $formuleRepository->add($formule, true);
 
             return $this->redirectToRoute('app_formule_index', [], Response::HTTP_SEE_OTHER);
@@ -55,6 +68,15 @@ class FormuleController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // on récupère le fichier présent dans le formulaire
+            $picture = $form->get('photo')->getData();
+            // si le champs picture est renseigné (si $picture existe)
+            if($picture){
+                // on récupère le nom du fichier téléversé en même temps qu'il est placé dans le dossier public/uploads/images/
+                $fileName = $fileUploader->upload($picture);
+                // on renseigne la propriété picture de l'article avec ce nom de fichier.
+                $formule->setPhoto($fileName);
+            }
             $formuleRepository->add($formule, true);
 
             return $this->redirectToRoute('app_formule_index', [], Response::HTTP_SEE_OTHER);

@@ -7,9 +7,8 @@
 	<div class="page">
 
 		<h1>mon profil</h1>
-
-		<div class="card profile" style="width: 18rem;">
-			<img src="{{ asset ('img/logo/avatar.svg') }}" class="card-img-top" alt="photo de profil">
+		<div class="card profile">
+			<img src="{{ asset ('uploads/images/') }}{{ app.user.avatar }}" class="card-img-top" alt="photo de profil">
 			<div class="card-body">
 				<h5 class="card-title">{{ app.user.prenom }}
 					{{ app.user.nom }}</h5>
@@ -29,5 +28,8 @@
 		<div class="card-footer">
 			{{ app.user.genre }}
 		</div>
+	</div>
+	<div class="validation">
+		<a href="{{ path('app_user_edit', {'id': app.user.id}) }}" class="btn btn-warning">éditer</a>
 	</div>
 </div>{% endblock %}
