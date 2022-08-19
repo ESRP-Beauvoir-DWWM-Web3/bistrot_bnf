@@ -64,17 +64,17 @@
 				<!-- Buttons connexion / déconnexion -->
 				{% if app.user %}
 					<li>
-						<a type="nutton" href="{{ path ('app_logout') }}" class="btn btn-light">déconnexion</a>
+						<a type="button" href="{{ path ('app_logout') }}" class="btn btn-light">déconnexion</a>
 					</li>
 					<li>
 						<i class="fas fa-shopping-cart"></i>
 					</li>
 				{% else %}
 					<li>
-						<a type="nutton" href="{{ path ('app_login') }}" class="btn btn-light">connexion</a>
+						<a type="button" href="{{ path ('app_login') }}" class="btn btn-light">connexion</a>
 					</li>
 					<li>
-						<a type="nutton" href="{{ path ('app_register') }}" class="btn btn-light">s'enregistrer</a>
+						<a type="button" href="{{ path ('app_register') }}" class="btn btn-light">s'enregistrer</a>
 					</li>
 				{% endif %}
 				<li>
