@@ -7,19 +7,25 @@
 	<div class="carousel-accueil">
 		
 		{# Insertion du carousel #}
+
 		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+{# 		<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      main
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
 				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
-
 			<div class="carousel-inner">
 				{% for formule in formules %}
 				{% if loop.first %}
-
 				<div class="carousel-item active" data-bs-interval="10000">
+       panier
 				{% else %}
+        
+				{% else %} #}
+
 {# 					<a href="{{ path('app_formule', {'id': formule.id}) }}">
 					<img src="{{ asset ('uploads/images/') }}{{ formule.photo }}" class="d-block w-100 mt-5" alt="photo de caroussel">
 					</a>
@@ -40,7 +46,11 @@
 				</div> #}
 				
 				<div class="carousel-item">
-					{% endif %}
+
+
+ 
+{# 					{% endif %}
+      main
 					<a href="{{ path('app_formule', {'id': formule.id}) }}">
 					<img src="{{ asset ('uploads/images/' ~ formule.photo) }}" class="d-block w-100 mt-5" alt="photo de caroussel">
 					</a>
@@ -49,7 +59,10 @@
 						<p>{{ formule.description }}</p>
 					</div>
 				</div>
+       panier
 			{% endfor %}
+			{% endfor %} #}
+
 			</div>
 
 			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -61,6 +74,7 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
+
 
 {#		<div id="myCarousel" class="carousel slide" data-bs-ride="true">
 			<div class="carousel-indicators">
@@ -98,6 +112,7 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>#}
+
 		
 	</div>
 {% endblock %}
